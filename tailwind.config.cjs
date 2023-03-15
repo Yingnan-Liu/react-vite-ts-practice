@@ -19,9 +19,10 @@ module.exports = {
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
+        // dmsans: ["DM Sans", "sans-serif"],
         //加粗标题字体
         montserrat: ["Montserrat", "sans-serif"],
+        notosans: ["Noto Sans SC", "sans-serif"],
       },
       //图片素材:
       content: {
