@@ -1,9 +1,10 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SelectedPage } from '@/shared/types';
 
 type Props = {
     page: string;
-    selectedPage: string;
-    setSelectedPage:(value:string)=>void
+    selectedPage: SelectedPage;
+    setSelectedPage:(value:SelectedPage)=>void
 }
 
 function Link({
@@ -11,7 +12,7 @@ function Link({
     selectedPage,
     setSelectedPage
 }: Props) {
-  const lowerCasePage = page.toLowerCase().replace(/ /g,"") //转为小写并删除空格
+  const lowerCasePage = page.toLowerCase().replace(/ /g,"") as SelectedPage//转为小写并删除空格
   return (
       <AnchorLink
           className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
