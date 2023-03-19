@@ -4,6 +4,7 @@ import Link from "./Link";
 import Logo from "@/assets/Logo.png"
 import { SelectedPage } from '@/shared/types';
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   selectedPage: SelectedPage;
@@ -32,7 +33,7 @@ const Navbar = ({selectedPage,setSelectedPage}: Props) => {
             ?
             (<div className={`${flexBetween} w-full`}>
             {/* inner right side : home,benefits...links */}
-            <div className={`${flexBetween} gap-8 text-sm`}>
+            <div className={`${flexBetween} gap-8`}>
               {pages.map((page,i)=>(
                 <Link
                   key={i}
@@ -43,9 +44,12 @@ const Navbar = ({selectedPage,setSelectedPage}: Props) => {
               ))}
             </div>
             {/* inner left side: Sign in and BUTTON  */}
-            <div className={`${flexBetween} gap-8`}>
+            <div className={`${flexBetween} gap-8 test-sm`}>
               <p>Sign In</p>
-              <button>Become a Member</button>
+                <ActionButton
+                  setSelectedPage={setSelectedPage}
+                  
+                >Become a Member</ActionButton>
             </div>
             </div>)
             :
