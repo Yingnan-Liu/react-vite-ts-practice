@@ -1,6 +1,10 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from '@/shared/types';
 
+/**
+ * 导航栏的跳转链接 组件
+ */
+
 type Props = {
     page: string;
     selectedPage: SelectedPage;
@@ -16,7 +20,7 @@ function Link({
   return (
       <AnchorLink
           className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
-          transition duration-500 hover:text-primary-300
+          transition duration-500 hover:text-primary-300 text-sm  w-auto
           `}
           href={`#${lowerCasePage}`}
           onClick={()=>setSelectedPage(lowerCasePage)}

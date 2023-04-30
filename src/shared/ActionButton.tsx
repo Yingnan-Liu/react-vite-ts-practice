@@ -2,6 +2,10 @@ import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { SelectedPage } from './types';
 
+/**
+ * 页面中的跳转按钮 组件
+ * */
+
 type Props = {
     children: React.ReactNode;
     setSelectedPage:(value:SelectedPage)=>void
